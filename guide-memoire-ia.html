@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Académique : Optimiser l'IA pour la Recherche</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- HEADER FIXE -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Mémoire & IA</div>
+            <nav class="header-nav">
+                <a href="index.html">Prompts</a>
+                <a href="guide-memoire-ia.html">Mémoire & IA</a>
+            </nav>
+            <button class="hamburger" id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+        </div>
+    </header>
+
+    <!-- OVERLAY POUR MOBILE -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- SIDEBAR DE NAVIGATION -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#s1">1. Définition du sujet</a></li>
+            <li><a href="#s2">2. Problématique</a></li>
+            <li><a href="#s3">3. Revue de littérature</a></li>
+            <li><a href="#s4">4. Plan détaillé</a></li>
+            <li><a href="#s5">5. Rédaction introduction</a></li>
+            <li><a href="#s6">6. Cadre méthodologique</a></li>
+            <li><a href="#s7">7. Développement (PEEL)</a></li>
+            <li><a href="#s8">8. Discussion</a></li>
+            <li><a href="#s9">9. Conclusion</a></li>
+            <li><a href="#s10">10. Révision stylistique</a></li>
+            <li><a href="#s11">11. Anti-plagiat</a></li>
+            <li><a href="#s12">12. Soutenance</a></li>
+            <li><a href="#config">Configuration IA</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="layout-wrapper">
+        <main>
+            <section id="intro" class="intro">
+                <h1>Transformer l'IA en Assistant de Recherche</h1>
+                <p>La rédaction d'un mémoire ou d'une thèse est un processus exigeant. Aujourd'hui, les intelligences artificielles peuvent considérablement accélérer ce travail, à condition de savoir les commander.</p>
+                <p>Ce guide vous propose un système de <strong>12 prompts optimisés</strong> pour le contexte académique francophone. Ils intègrent des garde-fous contre le plagiat et forcent un style rigoureux.</p>
+                <p><strong>Utilisez les onglets ci-dessous</strong> pour copier le code brut, ou visualiser comment l'IA va comprendre le formatage.</p>
+            </section>
+
+            <!-- SECTION 1 -->
+            <section id="s1">
+                <h2>1. Définition et délimitation du sujet</h2>
+                <p>Trouvez un angle précis et réaliste grâce à ce regard d'expert.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-1', 'preview-1')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-1', 'code-1')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-1" class="tab-panel active"><pre>Agis comme un directeur de recherche expérimenté en [ton domaine]. 
+Je souhaite travailler sur le thème général suivant : [ton thème].
+
+Propose 5 sujets de mémoire originaux, délimités et faisables dans le cadre d'un master. 
+Pour chaque sujet, présente une fiche structurée ainsi :
+- **Intitulé provisoire** : (précis et accrocheur)
+- **Problématique** : (sous forme de question principale)
+- **Intérêt scientifique** : (pourquoi ça compte aujourd'hui ?)
+- **Concepts clés** : (3 à 5 mots-clés académiques)
+- **Méthodologie suggérée** : (quali, quanti, mixte, doctrinal, etc.)
+- **Faisabilité** : (accès aux données potentiel, terrain réalisable)
+
+Classe les sujets du plus innovant au plus classique.</pre></div>
+                        <div id="preview-1" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section id="s2">
+                <h2>2. Formulation de la problématique</h2>
+                <p>Garantissez une logique descendante irréprochable avec la méthode de l'entonnoir.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-2', 'preview-2')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-2', 'code-2')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-2" class="tab-panel active"><pre>Agis comme un expert en épistémologie de [ton domaine].
+
+Voici le sujet retenu : [ton sujet].
+Aide-moi à construire l'armature logique de ma recherche en respectant la méthode de l'entonnoir :
+1. Rédige une **problématique principale** (une seule phrase affirmative ou interrogative, sans ambiguïté).
+2. Décline-la en **3 à 4 sous-questions de recherche** (qui opérationnalisent la grande question).
+3. Formule **2 hypothèses de recherche** réalistes et réversibles (qui pourront être infirmées ou confirmées).
+4. Précise l'**angle d'attaque** : quelle est la posture scientifique adoptée (critique, comparative, descriptive, etc.) ?
+
+Rédige dans un style extrêmement rigoureux. Évite les phrases vagues.</pre></div>
+                        <div id="preview-2" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section id="s3">
+                <h2>3. Synthèse de la littérature scientifique</h2>
+                <p>Forcez la mise en perspective critique et interdisez à l'IA d'inventer des sources.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-3', 'preview-3')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-3', 'code-3')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-3" class="tab-panel active"><pre>Agis comme un chercheur spécialiste de l'analyse de la littérature scientifique.
+RÈGLE ABSOLUE : N'invente AUCUNE source. N'invente AUCUN auteur. Base-toi UNIQUEMENT sur les textes que je vais te fournir.
+
+Voici mes notes/sources : [colle tes notes ou les résumés d'articles].
+
+Rédige une synthèse académique structurée en trois parties :
+1. **État de l'art** : Synthèse des idées principales par courants de pensée ou par thèmes.
+2. **Mise en perspective critique** : Points de convergence, divergences et débats entre les auteurs.
+3. **Identification de la "lacune" (Gap in the literature)** : Ce qui n'a pas encore été étudié, les limites méthodologiques des études actuelles, et comment mon mémoire va se positionner par rapport à elles.
+
+Utilise des connecteurs logiques académiques (En outre, Néanmoins, Contrairement à, Dans cette perspective...). 
+Style : énonciation impersonnelle ("Il convient de noter que...").</pre></div>
+                        <div id="preview-3" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section id="s4">
+                <h2>4. Élaboration du plan détaillé</h2>
+                <p>Imposez une vision architecturale et une progression logique à votre mémoire.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-4', 'preview-4')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-4', 'code-4')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-4" class="tab-panel active"><pre>Agis comme un encadrant pédagogique exigeant.
+
+Sujet : [ton sujet]
+Problématique : [ta problématique]
+
+Propose un plan détaillé (type [préciser : dialectique (I, II, III) ou thématique]) parfaitement équilibré. 
+Pour CHAQUE partie et sous-partie, indique :
+- Le **titre** (qui doit être un concept ou une idée, pas une description)
+- L'**objectif argumentaire** (que cherche-t-on à prouver ici ?)
+- Le **volume estimé** en nombre de mots ou de pages (ex: 5 pages)
+
+Assure-toi qu'il y a une progression logique ascendante (ex: du plus descriptif au plus analytique/critique) et que la conclusion de chaque partie fait le pont avec la suivante (effet de bascule).</pre></div>
+                        <div id="preview-4" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section id="s5">
+                <h2>5. Rédaction de l'introduction générale</h2>
+                <p>Évitez les erreurs de forme classiques avec cette architecture stricte.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-5', 'preview-5')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-5', 'code-5')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-5" class="tab-panel active"><pre>Rédige une introduction de mémoire complète selon l'architecture académique classique (en entonnoir).
+
+Sujet : [ton sujet]
+Problématique : [ta problématique]
+Annonce de plan : [résumé des grandes parties]
+
+Structuration exacte attendue :
+1. **Amorce contextuelle** (faits généraux ou historiques menant au sujet).
+2. **Délimitation et justification du sujet** (pourquoi ce sujet, pourquoi maintenant, périmètre retenu).
+3. **Problématisation** (transition vers ta problématique).
+4. **Annonce de l'angle méthodologique** (brève mention de l'approche choisie).
+5. **Annonce du plan** (rédigée avec élégance, SANS utiliser la formule triviale "Dans un premier temps... Dans un second temps...").
+
+Style : [Préciser : Impersonnel ("Il s'agira de...") ou Personnel ("Nous examinerons...")]. Ton soutenu, aucune familiarité.</pre></div>
+                        <div id="preview-5" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6 -->
+            <section id="s6">
+                <h2>6. Conception du cadre méthodologique</h2>
+                <p>Justifiez la validité scientifique de votre travail avec un vocabulaire technique précis.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-6', 'preview-6')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-6', 'code-6')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-6" class="tab-panel active"><pre>Agis comme un méthodologue expert.
+
+Sujet : [ton sujet]
+
+Rédige la section "Cadre méthodologique" de mon mémoire en justifiant chaque choix de manière épistémologique :
+1. **Posture épistémologique** : Quel est le paradigme sous-jacent (positiviste, constructiviste, interprétativiste, etc.) ?
+2. **Approche** : Qualitative, quantitative ou mixte ? Pourquoi cette approche est-elle la plus pertinente pour répondre à LA problématique ?
+3. **Outils de collecte** : (Entretiens, questionnaire, analyse de corpus, etc.). Justifie l'échantillon (taille, critères de sélection).
+4. **Traitement des données** : Comment les données brutes seront-elles analysées (analyse thématique, statistiques descriptives, etc.) ?
+5. **Limites méthodologiques** : Sois lucide sur les biais potentiels de ta propre proposition.
+
+Utilise un vocabulaire technique précis (triangulation, saturation des données, validité interne, etc.).</pre></div>
+                        <div id="preview-6" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7 -->
+            <section id="s7">
+                <h2>7. Développement argumentatif (Méthode PEEL)</h2>
+                <p>Évitez le "remplissage" en forçant l'IA à respecter la structure scientifique PEEL.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-7', 'preview-7')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-7', 'code-7')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-7" class="tab-panel active"><pre>Agis comme un rédacteur académique. Tu dois rédiger la section suivante :
+
+Titre : [titre de la sous-partie]
+Objectif de cette section : [ce qu'il faut démontrer]
+Résultats/Faits à intégrer : [colle tes données ou tes notes]
+
+Règles de rédaction STRICTES :
+- Chaque paragraphe doit suivre la structure PEEL : (Point = l'idée principale, Evidence = la preuve/donnée, Explanation = ton analyse, Link = la transition vers le prochain paragraphe).
+- Zéro phrase à la première personne du singulier ("Je pense que"). Utilise la troisième personne ou le "nous" de modestie.
+- Évite les métaphores littéraires et le vocabulaire commun. Utilise des termes de [ton domaine].
+- Intègre des sous-titres si la section est longue.
+- N'invente aucune donnée chiffrée ni aucune citation.</pre></div>
+                        <div id="preview-7" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 8 -->
+            <section id="s8">
+                <h2>8. Interprétation et discussion</h2>
+                <p>Ne répétez pas les résultats, mais expliquez-les en les confrontant à la théorie.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-8', 'preview-8')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-8', 'code-8')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-8" class="tab-panel active"><pre>Agis comme un chercheur expérimenté écrivant la section "Discussion" de son article.
+
+Voici mes principaux résultats : [colle tes résultats ou analyse]
+
+Rédige une discussion qui ne se contente PAS de répéter les résultats, mais qui les met en perspective :
+1. **Interprétation** : Que signifient ces résultats concrètement ?
+2. **Confrontation à la littérature** : Ces résultats confirment-ils ou contredisent-ils les auteurs [citer les auteurs de ta revue de littérature] ? Pourquoi ?
+3. **Apport original** : Quelle est la valeur ajoutée de mes résultats par rapport à ce qui était déjà connu ?
+4. **Implications pratiques/théoriques** : À quoi ces résultats peuvent-ils servir dans le monde réel ou académique ?
+5. **Limites de l'étude** : Sois autocritique sur les biais éventuels.</pre></div>
+                        <div id="preview-8" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 9 -->
+            <section id="s9">
+                <h2>9. Rédaction de la conclusion finale</h2>
+                <p>Donnez un sentiment d'achèvement tout en ouvrant de nouvelles portes.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-9', 'preview-9')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-9', 'code-9')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-9" class="tab-panel active"><pre>Rédige la conclusion finale de mon mémoire.
+
+Règles structurelles strictes :
+1. **Bilan** : Rappelle brièvement le parcours de la recherche SANS résumer le mémoire chapitre par chapitre.
+2. **Réponse à la problématique** : Donne une réponse claire, nette et sans équivoque à la question de départ.
+3. **Synthèse des apports** : Ce qu'on a appris de nouveau.
+4. **Limites** : Ce qui n'a pas pu être fait (manque de temps, de données, etc.).
+5. **Ouverture** : Formule une ou deux nouvelles questions de recherche soulevées par nos résultats, qui pourraient faire l'objet d'un futur mémoire ou d'une thèse.
+
+ATTENTION : La conclusion doit donner une impression d'achèvement intellectuel, tout en ouvrant une fenêtre vers l'avenir. Pas de nouvelles informations dans cette partie.</pre></div>
+                        <div id="preview-9" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 10 -->
+            <section id="s10">
+                <h2>10. Révision stylistique et éditoriale</h2>
+                <p>Nettoyez votre texte des scories rédactionnelles pour une densité académique irréprochable.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-10', 'preview-10')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-10', 'code-10')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-10" class="tab-panel active"><pre>Agis comme un correcteur professionnel et un styliste de textes académiques.
+
+Voici mon texte : [texte]
+
+Améliore-le selon les critères suivants :
+1. **Lourdeurs syntaxiques** : Remplace les tournures passives lourdes ou les verbes faibles ("faire", "avoir", "être") par des verbes d'action académiques ("souligner", "postuler", "corroborer").
+2. **Fluidité** : Ajoute les connecteurs logiques manquants pour lier les idées entre elles.
+3. **Précision lexicale** : Remplace les mots vagues ("chose", "aspect", "point") par le terme technique exact.
+4. **Concision** : Supprime les redondances et tournures pléonastiques.
+
+Ne change en aucun cas le sens de mon propos. Renvoie uniquement le texte corrigé, sans commentaires de ta part.</pre></div>
+                        <div id="preview-10" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 11 -->
+            <section id="s11">
+                <h2>11. Reformulation et intégrité scientifique</h2>
+                <p>Outsillez les algorithmes anti-plagiat (Turnitin) avec une réécriture structurelle profonde.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-11', 'preview-11')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-11', 'code-11')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-11" class="tab-panel active"><pre>Agis comme un expert en intégrité scientifique.
+
+Reformule le texte suivant pour éviter le plagiat tout en conservant un niveau académique élevé : [texte]
+
+ATTENTION : 
+- Ne fais pas un simple remplacement de synonymes (qui est détecté par les logiciels anti-plagiat type Turnitin).
+- Modifie la structure des phrases (inversion sujet-verbe, passage du passif à l'actif, ou inversement, découpage de phrases longues).
+- CONSERVE impérativement tous les termes techniques spécifiques à [ton domaine] et les noms propres.
+- Si le texte contient des chiffres ou des statistiques exactes, garde-les intacts.</pre></div>
+                        <div id="preview-11" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 12 -->
+            <section id="s12">
+                <h2>12. Préparation à la soutenance</h2>
+                <p>Simulez un véritable examen avec des questions pointues.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-12', 'preview-12')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-12', 'code-12')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-12" class="tab-panel active"><pre>Agis comme un membre d'un jury de soutenance de master, réputé pour être exigeant mais bienveillant.
+
+Voici le résumé de mon mémoire : [colle ton résumé ou ta conclusion].
+
+Génère une simulation de soutenance en deux étapes :
+
+ÉTAPE 1 : Pose-moi 8 questions réparties ainsi :
+- 2 questions sur le choix de la problématique et la délimitation du sujet.
+- 2 questions sur la méthodologie choisie et ses limites.
+- 3 questions sur l'interprétation des résultats (qui me pousseront à défendre mes choix).
+- 1 question "piège" sur une ouverture que j'ai proposée.
+
+ÉTAPE 2 : Pour chaque question, propose une "trame de réponse idéale" en 3 points (ce que le jury attend d'entendre), sans rédiger un discours mot à mot.
+
+ATTENTION : Ne me donne l'ÉTAPE 2 que lorsque j'aurai répondu à tes questions de l'ÉTAPE 1. (Agis de manière interactive).</pre></div>
+                        <div id="preview-12" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION CONFIG -->
+            <section id="config">
+                <h2>Configuration initiale de l'assistant IA</h2>
+                <p>"Programmez" votre IA en début de session pour qu'elle adopte le bon comportement global.</p>
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="switchTab(event, this, 'code-13', 'preview-13')">Code source</button>
+                            <button class="tab-btn" onclick="switchTab(event, this, 'preview-13', 'code-13')">Aperçu formaté</button>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">Copier le code</button>
+                    </div>
+                    <div class="prompt-content">
+                        <div id="code-13" class="tab-panel active"><pre>À partir de maintenant, tu vas agir comme mon directeur de mémoire attitré. Tu es expert en [TON DOMAINE].
+
+Règles globales que tu devras respecter pendant TOUTE notre conversation :
+1. Tu ne m'écriras JAMAIS de texte académique sans me fournir les sources exactes si tu en cites. Si tu n'en as pas, dis-le.
+2. Ton ton sera toujours objectif, analytique et formel.
+3. Tu ne feras JAMAIS de résumé type "TL;DR" ou de listes à puces simplistes quand je te demande une rédaction académique. Tu rédigeras des paragraphes articulés.
+4. Tu devras toujours valider l'étape précédente avec moi avant de passer à la suivante.
+
+Confirme-moi que tu as compris ces règles en me disant : "Bonjour. Je suis prêt à vous encadrer pour votre mémoire en [TON DOMAINE]. Quel est votre thème de départ ?"</pre></div>
+                        <div id="preview-13" class="tab-panel markdown-preview"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p><strong>Conseil final :</strong> L'IA est un outil d'aide à la formulation, pas un générateur de savoir. Fournissez vos propres données (via Zotero ou NotebookLM) et relisez chaque mot généré.</p>
+        <p>&copy; 2026 - Guide de Recherche Académique Optimisé pour l'IA</p>
+        <p>Jean-Kenel D. - Tous droits réservés</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // --- GESTION SIDEBAR MOBILE ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+
+        menuToggle.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Fermer la sidebar quand on clique sur un lien (sur mobile)
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+        // --- GESTION PROMPTS (Copier & Onglets) ---
+        function copyToClipboard(button) {
+            const promptBox = button.closest('.prompt-container');
+            const codeBlock = promptBox.querySelector('pre').innerText;
+
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                const originalText = button.innerText;
+                button.innerText = 'Copié !';
+                button.classList.add('copied');
+
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                alert("Impossible de copier. Veuillez sélectionner le texte manuellement.");
+            });
+        }
+
+        function switchTab(event, btn, toShowId, toHideId) {
+            const buttons = btn.parentElement.querySelectorAll('.tab-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const container = btn.closest('.prompt-container');
+            const panels = container.querySelectorAll('.tab-panel');
+            panels.forEach(p => p.classList.remove('active'));
+            
+            document.getElementById(toShowId).classList.add('active');
+        }
+
+        // --- INITIALISATION MARKDOWN ---
+        document.addEventListener("DOMContentLoaded", function() {
+            const codeBlocks = document.querySelectorAll('pre');
+            
+            codeBlocks.forEach((block) => {
+                const rawText = block.innerText;
+                const previewPanel = block.closest('.prompt-content').querySelector('.markdown-preview');
+                
+                if (previewPanel) {
+                    previewPanel.innerHTML = marked.parse(rawText);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
